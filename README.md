@@ -25,7 +25,8 @@ Ce projet effectue une analyse complète du dataset de dermatologie incluant :
 ```
 ML/
 ├── dermatology_analysis.ipynb   # Notebook principal d'analyse
-├── README.md                    # Ce fichier
+├── README.md                    # Readme
+├── objectifs.md                 # Objectifs
 └── .gitignore                   # Fichiers ignorés par Git
 ```
 
