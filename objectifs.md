@@ -11,7 +11,7 @@
   - Classe 4 : Pityriasis rosé
   - Classe 5 : Dermatite chronique
   - Classe 6 : Pityriasis rubra pilaire
-- **Algorithmes envisagés** : Random Forest, SVM, KNN, Réseaux de neurones
+- **Algorithmes envisagés** : SVM, Arbre de décision, Random Forest, XGBoost
 - **Métrique cible** : Accuracy > 95%, F1-score équilibré entre les classes
 
 ---
@@ -24,7 +24,7 @@
   - Regrouper les patients avec des manifestations similaires
   - Identifier des formes légères vs sévères de chaque maladie
   - Détecter des cas atypiques ou intermédiaires entre deux maladies
-- **Techniques** : K-Means, DBSCAN, Clustering hiérarchique
+- **Techniques** : K-Means, DBSCAN
 - **Validation** : Silhouette Score, Davies-Bouldin Index
 
 ---
@@ -56,6 +56,7 @@
 ### Actions correctives :
 - Imputation des valeurs manquantes par la médiane
 - Standardisation des features (moyenne=0, écart-type=1)
+- Analyse du déséquilibre inter-classes (ratio max/min > 3 → signalé, pas de rééchantillonnage car dataset de taille modeste)
 
 ---
 
