@@ -7,7 +7,6 @@ import {
   Chip,
   Container,
   CssBaseline,
-  Grid,
   LinearProgress,
   Stack,
   Step,
@@ -218,8 +217,15 @@ function App() {
             </Stepper>
           </motion.div>
 
-          <Grid container spacing={3} className="flow-grid">
-            <Grid item xs={12} md={7}>
+          <Box
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: { xs: '1fr', md: '7fr 5fr' },
+              gap: 3,
+            }}
+            className="flow-grid"
+          >
+            <Box>
               <Card className="form-card">
                 <CardContent>
                   <Stack direction="row" justifyContent="space-between" alignItems="center">
@@ -253,9 +259,16 @@ function App() {
                   )}
 
                   {metadata && (
-                    <Grid container spacing={2} className="input-grid">
+                    <Box
+                      sx={{
+                        display: 'grid',
+                        gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' },
+                        gap: 2,
+                      }}
+                      className="input-grid"
+                    >
                       {metadata.features.map((feature, index) => (
-                        <Grid item xs={12} sm={6} md={4} key={feature.name}>
+                        <Box key={feature.name}>
                           <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -271,9 +284,9 @@ function App() {
                               inputProps={{ step: '0.01' }}
                             />
                           </motion.div>
-                        </Grid>
+                        </Box>
                       ))}
-                    </Grid>
+                    </Box>
                   )}
 
                   <Box className="form-actions">
@@ -292,9 +305,9 @@ function App() {
                   </Box>
                 </CardContent>
               </Card>
-            </Grid>
+            </Box>
 
-            <Grid item xs={12} md={5}>
+            <Box>
               <Card className="result-card">
                 <CardContent>
                   <Typography variant="h2">Model output</Typography>
@@ -361,8 +374,8 @@ function App() {
                   </CardContent>
                 </Card>
               )}
-            </Grid>
-          </Grid>
+            </Box>
+          </Box>
         </Container>
       </Box>
     </ThemeProvider>
