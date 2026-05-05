@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Spline+Sans:wght@400;500;600&display=swap');
+
+:root {
+  font-family: 'Spline Sans', 'Space Grotesk', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #1b1814;
+  background-color: #f7f3ee;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 10% 20%, rgba(245, 158, 11, 0.12), transparent 45%),
+    radial-gradient(circle at 90% 10%, rgba(15, 118, 110, 0.12), transparent 50%),
+    #f7f3ee;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+code {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+}
