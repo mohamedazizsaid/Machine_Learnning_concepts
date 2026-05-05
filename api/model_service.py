@@ -1,5 +1,6 @@
 import os
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Dict, List, Tuple
 
 import joblib
@@ -14,13 +15,17 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 
+# Get paths relative to this file
+_CURRENT_DIR = Path(__file__).parent
+_PROJECT_ROOT = _CURRENT_DIR.parent
+
 DEFAULT_DATASET_PATH = os.environ.get(
     "DERMA_DATASET_PATH",
-    r"C:\Users\user\Desktop\eng\2eme\Machine_Learnning\ML_project\dermatology_database_1.csv",
+    str(_PROJECT_ROOT / "dermatology_database_1.csv"),
 )
 DEFAULT_MODEL_PATH = os.environ.get(
     "DERMA_MODEL_PATH",
-    r"C:\Users\user\Desktop\eng\2eme\Machine_Learnning\ML_project\api\model_artifacts.joblib",
+    str(_CURRENT_DIR / "model_artifacts.joblib"),
 )
 
 CLASS_NAME_MAP = {
