@@ -81,6 +81,21 @@
   margin-bottom: 28px;
 }
 
+.dso-tabs {
+  margin: 12px 0 22px;
+  padding: 6px;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+}
+
+.dso-tab {
+  text-transform: none;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
 .flow-grid {
   margin-top: 12px;
 }
@@ -141,6 +156,30 @@
   margin-top: 18px;
 }
 
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.metric-card {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(15, 118, 110, 0.08);
+  border: 1px solid rgba(15, 118, 110, 0.12);
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  color: rgba(27, 24, 20, 0.6);
+}
+
+.metric-value {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
 .result-item {
   display: grid;
   gap: 10px;
@@ -177,6 +216,29 @@
 .meta-note {
   color: rgba(27, 24, 20, 0.7);
   font-weight: 500;
+}
+
+.feature-list {
+  display: grid;
+  gap: 10px;
+}
+
+.feature-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.12);
+}
+
+.feature-name {
+  font-weight: 600;
+}
+
+.feature-score {
+  font-variant-numeric: tabular-nums;
 }
 
 @media (max-width: 900px) {
